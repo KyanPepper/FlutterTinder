@@ -33,6 +33,19 @@ class MyHomePage extends StatefulWidget {
 }
 
 
+class TinderProfile {
+  String name;
+  String description;
+  String starsign;
+  String hobbies;
+
+  TinderProfile({
+    this.name = '',
+    this.description = '',
+    this.starsign = '',
+    this.hobbies = '',
+  });
+}
 
 
 class _MyHomePageState extends State<MyHomePage> {

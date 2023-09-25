@@ -50,7 +50,33 @@ class TinderProfile {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  TinderProfile adam = TinderProfile(
+  name: 'Adam',
+  description: 'I love hiking and reading.',
+  starsign: 'Aries',
+  hobbies: 'Fishing',
+);
+
+TinderProfile pete = TinderProfile(
+  name: 'Peter',
+  description: 'I enjoy traveling and cooking.',
+  starsign: 'Leo',
+  hobbies: 'Painting',
+);
   
+TinderProfile ben = TinderProfile(
+  name: 'Ben',
+  description: 'I love eating worms and other bacteria',
+  starsign: 'Capricorn',
+  hobbies: 'Mountain Goat Hunting',
+);
+TinderProfile kyan = TinderProfile(
+  name: 'Kyan',
+  description: 'I am a programmer',
+  starsign: 'Cancer',
+  hobbies: 'Coding in flutter',
+);
+
   
   void _incrementCounter() {
     setState(() {

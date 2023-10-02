@@ -9,8 +9,16 @@ class TinderProfileDisplay extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(tinderProfile.name)),
-      body:
-           Stack(children: [Positioned(top: 40, right: 20, child: Text(tinderProfile.description),)]),
+      body: Stack(children: [
+        Positioned(
+            top: 40,
+            right: 0,
+            child: Image.asset(
+              tinderProfile.image,
+              height: 400,
+              width: 400,
+            ))
+      ]),
     );
   }
 }

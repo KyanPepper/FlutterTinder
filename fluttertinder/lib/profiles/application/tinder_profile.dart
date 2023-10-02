@@ -10,7 +10,7 @@ class TinderProfileDisplay extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text(tinderProfile.name)),
       body:
-          const Stack(alignment: Alignment.topCenter, children: [Text("test")]),
+           Stack(children: [Positioned(top: 40, right: 20, child: Text(tinderProfile.description),)]),
     );
   }
 }

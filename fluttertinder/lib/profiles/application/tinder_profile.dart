@@ -7,10 +7,10 @@ class TinderProfileDisplay extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.red,
-      child: Text(
-          "${tinderProfile.name} ${tinderProfile.description} ${tinderProfile.hobbies} ${tinderProfile.starsign}"),
+    return Scaffold(
+      appBar: AppBar(title: Text(tinderProfile.name)),
+      body:
+          const Stack(alignment: Alignment.topCenter, children: [Text("test")]),
     );
   }
 }
@@ -40,13 +40,21 @@ class FormState extends State<ProfileaddForm> {
       child: Column(
         children: <Widget>[
           const Text("Name"),
-          TextFormField(controller: usernameController,),
+          TextFormField(
+            controller: usernameController,
+          ),
           const Text("Bio"),
-          TextFormField(controller: bioController,),
+          TextFormField(
+            controller: bioController,
+          ),
           const Text("Hobbies"),
-          TextFormField(controller: hobbiesController,),
+          TextFormField(
+            controller: hobbiesController,
+          ),
           const Text("Star Sign"),
-          TextFormField(controller: signController,),
+          TextFormField(
+            controller: signController,
+          ),
           // Add TextFormFields and ElevatedButton here.
         ],
       ),

@@ -1,16 +1,14 @@
-# fluttertinder
+# Flutter Tinder
+Programer: Kyan Kotschevar-Smead
+## WORK IN PROGRESS
 
-A new Flutter project.
+**Flutter Tinder** Is a recreation of the popular dating app Tinder, reimagined and developed in Flutter. This project showcases mobile app development skills, emphasizing user-friendly and interactive mobile application design.
 
-## Getting Started
+- **Technology Stack:** Flutter, SQLITE, Django
+- **Year** 2023
 
-This project is a starting point for a Flutter application.
+## How to Use
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Clone this repository to your local machine.
+2. Navigate to the project directory.
+3. Configure VSCode with Android Studio 

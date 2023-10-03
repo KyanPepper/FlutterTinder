@@ -17,7 +17,20 @@ class TinderProfileDisplay extends StatelessWidget {
               tinderProfile.image,
               height: 400,
               width: 400,
-            ))
+            )),
+        Positioned(
+          top: 500,
+          right: 100,
+          child: Text('Bio: ' + tinderProfile.description),
+        ),
+        Positioned(
+            top: 575,
+            right: 150,
+            child: Text('Hobbies: ' + tinderProfile.hobbies)),
+        Positioned(
+            top: 650,
+            right: 150,
+            child: Text('StarSign: ' + tinderProfile.starsign))
       ]),
     );
   }

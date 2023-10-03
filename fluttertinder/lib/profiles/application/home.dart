@@ -33,7 +33,7 @@ class CreateProfileButton extends StatelessWidget {
               });
         },
         child: const Icon(
-          Icons.access_alarm_rounded,
+          Icons.person_add_alt_1_outlined,
           size: 50,
         ),
       );

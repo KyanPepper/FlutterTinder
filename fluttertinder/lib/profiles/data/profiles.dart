@@ -13,7 +13,7 @@ class TinderProfile {
       this.image = "lib/profiles/data/images/defPic.png"});
 }
 
-final List<TinderProfile> profiles = [
+ List<TinderProfile> profiles = [
   TinderProfile(
       name: 'Adam',
       description: 'I love hiking and reading.',

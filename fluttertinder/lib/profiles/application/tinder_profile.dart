@@ -56,28 +56,40 @@ class FormState extends State<ProfileaddForm> {
   @override
   Widget build(BuildContext context) {
     // Build a Form widget using the _formKey created above.
-    return Form(
-      key: _formKey,
-      child: Column(
-        children: <Widget>[
-          const Text("Name"),
-          TextFormField(
-            controller: usernameController,
-          ),
-          const Text("Bio"),
-          TextFormField(
-            controller: bioController,
-          ),
-          const Text("Hobbies"),
-          TextFormField(
-            controller: hobbiesController,
-          ),
-          const Text("Star Sign"),
-          TextFormField(
-            controller: signController,
-          ),
-          // Add TextFormFields and ElevatedButton here.
-        ],
+    return Scaffold(
+      body: Form(
+        key: _formKey,
+        child: Column(
+          children: <Widget>[
+            const Text("Name"),
+            TextFormField(
+              controller: usernameController,
+            ),
+            const Text("Bio"),
+            TextFormField(
+              controller: bioController,
+            ),
+            const Text("Hobbies"),
+            TextFormField(
+              controller: hobbiesController,
+            ),
+            const Text("Star Sign"),
+            TextFormField(
+              controller: signController,
+            ),
+            // Add TextFormFields and ElevatedButton here.
+            ElevatedButton(
+                onPressed: () {
+                  TinderProfile addPerson = TinderProfile(
+                      name: usernameController.text,
+                      description: bioController.text,
+                      starsign: signController.text,
+                      hobbies: hobbiesController.text);
+                      profiles.add(addPerson);
+                },
+                child: Text('Add'))
+          ],
+        ),
       ),
     );
   }

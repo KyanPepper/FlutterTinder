@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertinder/profiles/application/tinder_profile.dart';
+import 'package:fluttertinder/profiles/presentation/profile_form.dart';
+import 'package:fluttertinder/profiles/presentation/tinder_profile.dart';
 import 'package:fluttertinder/profiles/data/profiles.dart';
 
 class Home extends StatelessWidget {
@@ -28,9 +29,8 @@ class CreateProfileButton extends StatelessWidget {
         onPressed: () async {
           await showDialog(
               context: context,
-              builder: (_) {
-                return  ProfileaddForm();
-              },barrierDismissible: false);
+              builder: (_) => const ProfileaddForm(),
+              barrierDismissible: true);
         },
         child: const Icon(
           Icons.person_add_alt_1_outlined,
@@ -38,5 +38,3 @@ class CreateProfileButton extends StatelessWidget {
         ),
       );
 }
-
-

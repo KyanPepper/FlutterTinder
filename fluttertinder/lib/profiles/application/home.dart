@@ -30,7 +30,7 @@ class CreateProfileButton extends StatelessWidget {
               context: context,
               builder: (_) {
                 return  ProfileaddForm();
-              },barrierDismissible: true);
+              },barrierDismissible: false);
         },
         child: const Icon(
           Icons.person_add_alt_1_outlined,

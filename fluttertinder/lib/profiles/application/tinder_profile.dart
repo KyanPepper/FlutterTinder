@@ -85,7 +85,8 @@ class FormState extends State<ProfileaddForm> {
                       description: bioController.text,
                       starsign: signController.text,
                       hobbies: hobbiesController.text);
-                      profiles.add(addPerson);
+                  profiles.add(addPerson);
+                  debugPrint(profiles.toString());
                 },
                 child: Text('Add'))
           ],

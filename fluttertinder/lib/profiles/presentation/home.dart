@@ -9,10 +9,11 @@ class Home extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final Profiles = ref.watch(tinderProvider);
     return Scaffold(
       floatingActionButton: const CreateProfileButton(),
       body: PageView(
-        children: profiles.map((e) {
+        children: Profiles.map((e) {
           return Center(
             child: TinderProfileDisplay(tinderProfile: e),
           );
@@ -30,7 +31,7 @@ class CreateProfileButton extends StatelessWidget {
         onPressed: () async {
           await showDialog(
               context: context,
-              builder: (_) => const ProfileaddForm(),
+              builder: (_) => ProfileaddForm(),
               barrierDismissible: true);
         },
         child: const Icon(

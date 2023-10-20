@@ -1,25 +1,19 @@
 // Define a custom Form widget.
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fluttertinder/profiles/data/profiles.dart';
 
-class ProfileaddForm extends StatefulWidget {
-  const ProfileaddForm({super.key});
-
-  @override
-  ProfileaddFormState createState() {
-    return ProfileaddFormState();
-  }
-}
+class ProfileaddForm extends ConsumerWidget {
+  ProfileaddForm({super.key});
 
 // This class holds data related to the form.
-class ProfileaddFormState extends State<ProfileaddForm> {
 
   final usernameController = TextEditingController();
   final bioController = TextEditingController();
   final hobbiesController = TextEditingController();
   final signController = TextEditingController();
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       body: Form(
         child: Column(
@@ -43,12 +37,15 @@ class ProfileaddFormState extends State<ProfileaddForm> {
             // Add TextFormFields and ElevatedButton here.
             ElevatedButton(
                 onPressed: () {
-                  TinderProfile addPerson = TinderProfile(
+                  TinderProfile Person = TinderProfile(
                       name: usernameController.text,
                       description: bioController.text,
                       starsign: signController.text,
                       hobbies: hobbiesController.text);
-                
+                  ref
+                      .read(tinderProvider.notifier)
+                      .update((state) => [...state, Person]);
+                  Navigator.of(context).pop();
                 },
                 child: const Text('Add')),
             ElevatedButton(

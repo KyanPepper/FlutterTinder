@@ -4,7 +4,7 @@ Programer: Kyan Kotschevar-Smead
 
 **Flutter Tinder** Is a recreation of the popular dating app Tinder, reimagined and developed in Flutter. This project showcases mobile app development skills, emphasizing user-friendly and interactive mobile application design.
 
-- **Technology Stack:** Flutter, SQLITE, Django
+- **Technology Stack:** Flutter, RiverPod
 - **Year** 2023
 
 ## How to Use

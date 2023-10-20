@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertinder/profiles/data/profiles.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 
 class TinderProfileDisplay extends StatelessWidget {

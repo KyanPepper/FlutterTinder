@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fluttertinder/profiles/presentation/profile_form.dart';
 import 'package:fluttertinder/profiles/presentation/tinder_profile.dart';
 import 'package:fluttertinder/profiles/data/profiles.dart';
 
-class Home extends StatelessWidget {
+class Home extends ConsumerWidget {
   const Home({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       floatingActionButton: const CreateProfileButton(),
       body: PageView(

@@ -13,6 +13,7 @@ class ProfileaddForm extends StatefulWidget {
 
 // This class holds data related to the form.
 class ProfileaddFormState extends State<ProfileaddForm> {
+
   final usernameController = TextEditingController();
   final bioController = TextEditingController();
   final hobbiesController = TextEditingController();
@@ -47,7 +48,7 @@ class ProfileaddFormState extends State<ProfileaddForm> {
                       description: bioController.text,
                       starsign: signController.text,
                       hobbies: hobbiesController.text);
-                  profiles.add(addPerson);
+                
                 },
                 child: const Text('Add')),
             ElevatedButton(

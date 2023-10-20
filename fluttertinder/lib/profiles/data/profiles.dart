@@ -1,3 +1,5 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 class TinderProfile {
   final String name;
   final String description;
@@ -13,7 +15,11 @@ class TinderProfile {
       this.image = "lib/profiles/data/images/defPic.png"});
 }
 
- List<TinderProfile> profiles = [
+final tinderProvider = StateProvider<List>((ref) {
+  return profiles;
+});
+
+List<TinderProfile> profiles = [
   TinderProfile(
       name: 'Adam',
       description: 'I love hiking and reading.',
